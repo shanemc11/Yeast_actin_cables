@@ -358,7 +358,7 @@ with sns.axes_style(st):
     plt.plot(t_tot,(intercept_t0 + slope_t0*t_tot),\
              'k--', lw=3,\
              label=r"Slope = {0:.3f}+/-{2:.3f}, R$^2$ = {1:.2f}".\
-                 format(slope_t0,-1*r_value_t0,1.96*std_err_t0 )) 
+                 format(slope_t0, r_value_t0**2,1.96*std_err_t0 )) 
 
         
     sns.scatterplot(x=df_t0_t_mean['lifetime'], y=df_t0_t_mean['vel'], \
@@ -388,7 +388,7 @@ with sns.axes_style(st):
     plt.plot(t_tot,(intercept_t8 + slope_t8*t_tot),\
              'k--', lw=3,\
              label=r"Slope = {0:.3f}+/-{2:.3f}, R$^2$ = {1:.2f}".\
-                 format(slope_t8,-1*r_value_t8,1.96*std_err_t8 )) 
+                 format(slope_t8,r_value_t8**2,1.96*std_err_t8 )) 
 
         
     sns.scatterplot(x=df_t8_t_mean['lifetime'], y=df_t8_t_mean['vel'], \
