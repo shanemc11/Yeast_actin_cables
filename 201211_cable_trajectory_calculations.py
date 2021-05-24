@@ -31,7 +31,7 @@ import os
 #Note: Must change the frame rate (r) to match the imaging session!
 #==============================================================================
 #setup the data directory
-datadir = "D:\\Goode_Lab\\Projects\\actin_cables\\data\\200915_cdc28-13ts_cable_induction_data\\"
+datadir = "D:\\Goode_Lab\\Projects\\actin_cables\\data\\cable_trajectory_data\\test\\"
 
 #initalize data frame to append all data 
 df = pd.DataFrame()
@@ -45,7 +45,7 @@ r = 2.3 #frame interval; must set for each microscopy session
 #==============================================================================
 
 #Read in each trace from the directory
-for f in glob.glob(datadir + '200915_' + '*' + '.csv'):
+for f in glob.glob(datadir + '*' + '.csv'):
     
     #open each file
     df = pd.read_csv(f)
